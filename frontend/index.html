@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NoteTune</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header><div class="logo">♫ NoteTune</div><p>Turn your notes into a song you can remember.</p></header>
+      <section class="card">
+        <h1>Make learning sing</h1>
+        <p>Upload PDF, Word, JPG, or PNG notes. Scanned pages work too.</p>
+        <label class="dropzone" for="files">Choose note files
+          <input id="files" type="file" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+        </label>
+        <button id="make-song">Make my song</button>
+        <p id="status" role="status"></p>
+      </section>
+      <section id="result" class="card hidden">
+        <div class="result-heading"><h2>Your song</h2><button id="download">Download TXT</button></div>
+        <pre id="lyrics"></pre>
+        <details><summary>Coverage check</summary><div id="coverage"></div></details>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
+
